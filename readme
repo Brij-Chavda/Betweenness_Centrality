@@ -1,0 +1,17 @@
+This assignment is to find Betweenness Centrality in a giant connected network. 
+Betweenness Centrality is a measure of number of shortest path passing through a vertex in Graph theory. 
+Two different algorithms are used to find Betweenness Centrality Floyd Warshall and Breadth First Search.
+
+In order to find Betweenness Centrality of any node, shortest distance and no of shortest paths between any to node are required. 
+After calculating this Betweenness Centrality can be calculated this information. 
+I have modified vertex number and map onto number less than vertex number to make algorithm work time efficiently. 
+As graph is undirected shortest distance and no of shortest paths array are symmetric, so I have stored it as lower symmetric matrices. 
+
+Erdos Renyi Model graph generator generates graph by taking number of vertices and probability of edges as input. 
+Erdos Renyi Model uses binomial probability distribution to generate edges. 
+For connectedness in the graph, probability greater than log(V)/V is used, as it is tight bound for connectedness in Erdos Renyi model. 
+By using this model I have generated graphes with different vertices and fetched giant connected component, 
+mapped it to small value (value less than vertex number) and then stored it in file for further use.
+
+This file is used as input for further process. 
+First adjacency list is created from this file then Floyd and Breadth First Search algorithm are used to find Betweenness Centrality.
